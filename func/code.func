@@ -15,6 +15,7 @@
   throw_unless(33, msg_seqno == stored_seqno);
   throw_unless(34, subwallet_id == stored_subwallet);
   cell actions = in_msg.preload_ref();
+  public_key~touch();
   throw_unless(35, check_signature(cell_hash(actions), signature, public_key));
   accept_message();
   set_actions(actions);
