@@ -71,12 +71,9 @@ b>
 
 <b x{0ec3c86d} s, send-mode 8 u, swap ref, swap ref, b>
 
+<b subwallet_id 32 u, now timeout + 32 u, seqno 32 u, swap ref, b>
 dup hashu wallet_pk ed25519_sign_uint
-
-<b swap B, subwallet_id 32 u, now timeout + 32 u, seqno 32 u, swap ref, b>
-
-<b b{1000100} s, wallet_addr addr, 0 Gram, b{00} s,
-   swap <s s, b>
+<b b{1000100} s, wallet_addr addr, 0 Gram, b{00} s, swap B, swap <s s, b>
 
 2 boc+>B
 

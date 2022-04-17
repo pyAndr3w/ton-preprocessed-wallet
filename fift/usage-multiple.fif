@@ -79,10 +79,10 @@ variable order#   order# 0!
 order-file include
 
 // create external message
-dup hashu wallet_pk ed25519_sign_uint
-<b swap B, subwallet_id 32 u, now timeout + 32 u, seqno 32 u, swap ref, b>
+<b subwallet_id 32 u, now timeout + 32 u, seqno 32 u, swap ref, b>
 dup ."signing message: " <s csr. cr
-<b b{1000100} s, wallet_addr addr, 0 Gram, b{00} s, swap <s s, b>
+dup hashu wallet_pk ed25519_sign_uint
+<b b{1000100} s, wallet_addr addr, 0 Gram, b{00} s, swap B, swap <s s, b>
 dup ."resulting external message: " <s csr. cr
 
 2 boc+>B
