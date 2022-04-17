@@ -8,17 +8,16 @@
 
 () recv_external(slice in_msg) impure {
   slice signature = in_msg~load_bits(512);
+  int hash = slice_hash(in_msg);
   (int subwallet_id, int valid_until, int msg_seqno) = (in_msg~load_uint(32), in_msg~load_uint(32), in_msg~load_uint(32));
   throw_if(35, valid_until <= now());
   slice ds = get_data().begin_parse();
   (int stored_seqno, int stored_subwallet, int public_key) = (ds~load_uint(32), ds~load_uint(32), ds.preload_uint(256));
+  throw_unless(35, check_signature(hash, signature, public_key));
   throw_unless(33, msg_seqno == stored_seqno);
   throw_unless(34, subwallet_id == stored_subwallet);
-  cell actions = in_msg.preload_ref();
-  public_key~touch();
-  throw_unless(35, check_signature(cell_hash(actions), signature, public_key));
   accept_message();
-  set_actions(actions);
+  set_actions(in_msg.preload_ref());
   set_data(begin_cell()
     .store_uint(stored_seqno + 1, 32)
     .store_uint(stored_subwallet, 32)
