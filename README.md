@@ -6,7 +6,7 @@
 [![toncli](https://img.shields.io/badge/for%20use%20with-toncli-brightgreen)](https://github.com/disintar/toncli)
 [![TON](https://img.shields.io/badge/based%20on-TON-blue)](https://ton.org/)
 
-<center><h1>Actual verion is <a href="https://github.com/pyAndr3w/ton-preprocessed-wallet-v2">ton-preprocessed-wallet-v2</a></h1></center>
+<center><h1>Actual version is <a href="https://github.com/pyAndr3w/ton-preprocessed-wallet-v2">ton-preprocessed-wallet-v2</a></h1></center>
 
 TON based wallet smart contract whose input is a preprocessed [c5 register](https://ton.org/docs/tvm.pdf#page=11).
 
