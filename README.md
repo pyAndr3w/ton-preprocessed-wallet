@@ -1,8 +1,8 @@
 ## ton-preprocessed-wallet
 
-[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/license-LGPL-brightgreen)](https://opensource.org/license/lgpl-3-0/)
 [![FunC](https://img.shields.io/badge/made%20with-FunC-brightgreen)](https://ton.org/docs/#/func)
-[![Fift](https://img.shields.io/badge/made%20with-Fift-brightgreen)](https://newton-blockchain.github.io/docs/fiftbase.pdf)
+[![Fift](https://img.shields.io/badge/made%20with-Fift-brightgreen)](https://ton.org/fiftbase.pdf)
 [![toncli](https://img.shields.io/badge/for%20use%20with-toncli-brightgreen)](https://github.com/disintar/toncli)
 [![TON](https://img.shields.io/badge/based%20on-TON-blue)](https://ton.org/)
 
@@ -18,3 +18,6 @@ The message body is assemble using the following [TL-B](https://github.com/tonst
 `msg_body$_ sig:bits512 subwallet_id:uint32 valid_until:uint32 seq_no:uint32 actions:^OutList = MsgBody`
 
 OutList is assemble using [the standard TL-B scheme for c5 register](https://github.com/newton-blockchain/ton/blob/master/crypto/block/block.tlb#L368:L381).
+
+## License
+[GNU LESSER GENERAL PUBLIC LICENSE Version 3](./LICENSE.LGPL)

@@ -1,4 +1,22 @@
-;; Preprocessed wallet smart contract
+{-
+  ton-preprocessed-wallet – open-source optimized wallet for tvm-based blockchains
+
+  Copyright (C) 2022 pyAndr3w <gutarev01@gmail.com>
+
+  This file is part of ton-preprocessed-wallet.
+
+  ton-preprocessed-wallet is free software: you can redistribute it and/or modify it under the terms
+  of the GNU Lesser General Public License as published by the Free Software Foundation,
+  either version 3 of the License, or (at your option) any later version.
+
+  ton-preprocessed-wallet is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  See the GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public License along with ton-preprocessed-wallet.
+  If not, see <https://www.gnu.org/licenses/>.
+-}
+
 
 () set_actions(cell c) impure asm "c5 POP";
 
